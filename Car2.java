@@ -1,12 +1,24 @@
-package java_20241203;
-// 사용자가 선언한 Car2 클래스
-public class Car2 {
- // 사용자가 선언한 Car2 클래스의 생성자
-// 생성자는 클래스명과 동일한 이름을 가지고 있는 메소드를 생성자라고 함
- // 생성자는 해당 클래스를 사용할 수 있도록 기본 세팅을 함
-// 생성자 명 뒤에 있는 괄호에 아무것도 없는 생성자는 기본 생성자라고 함< ( ) 가 비어있는 생성자 >
-// 사용자가 생성자를 모두 생략했을 경우 컴파일러가 자동으로 기본 생성자를 추가함
-//    public Car2(){
+package java_20241204;
 
-//    }
+public class Car2 {
+    // 필드(멤버 변수 선언)
+    String moedl;
+    int speed;
+// 생성자 선언
+    Car2(String model){
+// 매개변수로 받은 model 필드인 model에 저장
+        this.moedl = model;
+    }
+
+    void setSpeed(int speed){
+// 매개변수로 받은 speed를 필드인 speed 에 저장
+        this.speed = speed;
+    }
+
+    void run() {
+        for (int i = 10; i<=50; i+=10  ){
+            this.setSpeed(i);
+            System.out.println(this.moedl +"가 달립니다.(시속 : " +this.speed +"km/s");
+        }
+    }
 }

@@ -1,15 +1,18 @@
-package java_20241203;
+package java_20241204;
 
 public class Car2Ex {
     public static void main(String[] args) {
-// Car2 클래스 타입의 변수 mycar 선언
-// new 키워드와 Car2()생성자를 사용하여 메모리에 객체 생성
-// 생성된 객체의 주소를 변수 mycar2에 저장
-        Car2 car2 = new Car2();
+        // Car2 클래스 타입의 변수 car1 을 생성
+// new 키워드와 Car2() 생성자를 호출하여 객체 생성 및 주소 저장
+        Car2 car1 = new Car2("포르쉐");
+        // Car2 클래스 타입의 변수 car2 을 생성
+// new 키워드와 Car2() 생성자를 호출하여 객체 생성 및 주소 저장
+        Car2 car2 = new Car2 ("현대자동차");
 
-        Car3 car3 = new Car3 ( "검정", 3000 );
+// 객체 car1 과 객체 car2 는
+// 동일한 클래스를 바탕으로 생성된 객체이만 서로 다른 객체
+        car1.run();
+        car2.run();
 
-// 클래스 Car3에는 기본 생성자인 Car3()이 없기 때문에 new키워드가 기본 생성자를 호출할 수 없음
-        Car3 car31 = new Car3();
     }
 }
